@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cosmetic from '../Costemic/Cosmetic';
+import './Cosmetics.css'
 // import {add, multiply} from '../../utilities/storage';
 
 const Cosmetics = () => {
@@ -16,13 +17,16 @@ const Cosmetics = () => {
     return (
         <div>
             <h3>Shop My Cosmetics!</h3>
-            {
+            <div className="cosmetics">
+              {
                 cosmetics.map(cosmetic => <Cosmetic
                     key={cosmetic._id}
                     cosmetic={cosmetic}
                     ></Cosmetic>)
 
-            }
+            }  
+            </div>
+            
             
         </div>
     );
