@@ -12,14 +12,16 @@ const Cosmetic = (props) => {
         addToDb(id);
     }
 
-    
+    const handleRemove = id => {
+        deleteFromDb(id);
+    }
     return (
         <div className="cosmetic">
             <h4>Name: {name}</h4>
             <h5>ID: {_id} Price: {balance}</h5>
             <h5>Company: {company}</h5>
             <button onClick={() => handlePurchase(_id)}>Purchase</button>
-            
+            <button onClick={()=> handleRemove(_id)}>Remove From Purchase</button>
         </div>
     );
 };
