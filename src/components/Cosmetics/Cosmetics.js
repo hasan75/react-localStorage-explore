@@ -17,6 +17,7 @@ const Cosmetics = () => {
     return (
         <div>
             <h3>Shop My Cosmetics!</h3>
+            <h4>Open Console To See LocalStorage Data </h4>
             <div className="cosmetics">
               {
                 cosmetics.map(cosmetic => <Cosmetic
